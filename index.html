@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./resources/css/materialize.min.css" />
+  <link rel="stylesheet" href="./resources/css/styles.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      
+      <div class="card-panel col l12">
+        <h3 class="blue-text text-darken-2 ">Mi aplicacion para Gastos</h3>
+      </div>
+      <div class="col l7 s12">
+        <table id="transactionTable" class="striped">
+          <tr>
+            <th>Tipo</th>
+            <th>Descripcion</th>
+            <th>Monto</th>
+            <th>Categoria</th>
+            <th>Eliminar</th>
+          </tr>
+        </table>
+      </div>
+      <div class="col l5 s12">
+        <div class="col l11 offset-l1">
+          <form id="transactionForm">
+            <div class="formField">
+              <p class="flow-text">
+                <span>Transaccion</span>
+                <label>
+                  <i class="material-icons">add</i>
+                  <input class="with-gap" id="ingreso" name="transactionType" type="radio" value="Ingreso" checked />
+                  <span>Ingreso</span>
+                </label>
+                <label>
+                  <i class="material-icons">indeterminate_check_box</i>
+                  <input class="with-gap" id="egreso" name="transactionType" type="radio" value="Egreso" checked />
+                  <span>Egreso</span>
+                </label>
+              </p>
+            </div>
+            <div class="formField input-field ">
+              <input type="text" class="validate" id="transactionDescription" name="transactionDescription">
+              <label for="transactionDescription">Descripcion</label>
+            </div>
+            <div class="formField input-field">
+              <input id="transactionAmount" type="number" class="validate" name="transactionAmount">
+              <label for="transactionAmount">Cantidad</label>
+            </div>
+
+            <div class="formField">
+              <label for="transactionCategory">Categoria</label>
+              <select class="browser-default" id="transactionCategory" name="transactionCategory">
+              </select>
+            </div>
+            <br>
+            <br>
+            <div class="formField">
+              <button class="btn waves-effect waves-light" type="submit" name="action" id="btnEnvio">Anadir
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./resources/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./resources/js/scripts.js"></script>
+  </div>
+</body>
+
+</html>
